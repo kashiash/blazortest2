@@ -26,6 +26,7 @@
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="29.0.1" />
     <PackageReference Include="DevExpress.ExpressApp.Core.All" Version="20.1.2-beta" />
     <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="20.1.2-beta" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="20.1.2-beta" />

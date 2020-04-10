@@ -7,18 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JKXAF.Module.BusinessObjects
+namespace Demo1.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [DefaultProperty(nameof(Symbol))]
-    public class Kraj : XPLiteObject
+    public class Kraj : XPCustomObject
 	{
 		public Kraj(Session session) : base(session)
 		{ }
 
         
         [Size(3)]
-   
+        [Key]
         public string Symbol
         {
             get => symbol;
