@@ -10,16 +10,12 @@ using System.Text;
 
 namespace Solution1.Module.BusinessObjects
 {
-    class DataGenerator
+   public static class DataGenerator
     {
-        private IObjectSpace ObjectSpace;
-        public DataGenerator(IObjectSpace os)
-        {
-            ObjectSpace = os;
-        }
 
 
-        private void WygenerujKlientow()
+
+        public static void WygenerujKlientow(IObjectSpace ObjectSpace)
         {
             var cusFaker = new Faker<Klient>("pl")
               .CustomInstantiator(f => ObjectSpace.CreateObject<Klient>())
@@ -44,10 +40,10 @@ namespace Solution1.Module.BusinessObjects
             var contacts = conFaker.Generate(10000);
 
             var stawki = new List<StawkaVAT>();
-            stawki.Add(NowaStawka("23%", 23M));
-            stawki.Add(NowaStawka("0%", 0M));
-            stawki.Add(NowaStawka("7%", 7M));
-            stawki.Add(NowaStawka("ZW", 0M));
+            stawki.Add(NowaStawka( ObjectSpace,"23%", 23M));
+            stawki.Add(NowaStawka(ObjectSpace, "0%", 0M));
+            stawki.Add(NowaStawka(ObjectSpace, "7%", 7M));
+            stawki.Add(NowaStawka(ObjectSpace, "ZW", 0M));
 
 
 
@@ -58,12 +54,12 @@ namespace Solution1.Module.BusinessObjects
              .RuleFor(o => o.Cena, f => f.Random.Decimal(0.01M, 1000M));
 
             var products = prodFaker.Generate(100);
-            WygenerujFaktury(10000, customers, products);
+            WygenerujFaktury(ObjectSpace, 10000, customers, products);
         }
 
 
 
-        private StawkaVAT NowaStawka(string symbol, decimal wartosc)
+        private static StawkaVAT NowaStawka(IObjectSpace ObjectSpace,string symbol, decimal wartosc)
         {
 
             var stawka = ObjectSpace.FindObject<StawkaVAT>(new BinaryOperator("Symbol", symbol));
@@ -77,7 +73,7 @@ namespace Solution1.Module.BusinessObjects
             return stawka;
         }
 
-        private void WygenerujFaktury(int liczbaFaktur, IList<Klient> customers, IList<Produkt> products)
+        private static void WygenerujFaktury(IObjectSpace ObjectSpace,int liczbaFaktur, IList<Klient> customers, IList<Produkt> products)
         {
             if (customers is null)
             {
@@ -106,7 +102,7 @@ namespace Solution1.Module.BusinessObjects
             var items = itemsFaker.Generate(liczbaFaktur * 10);
         }
 
-      public   void DodajKraje()
+      public static   void DodajKraje(IObjectSpace ObjectSpace)
         {
 
             foreach (CultureInfo ci in CultureInfo.GetCultures(CultureTypes.FrameworkCultures))
@@ -118,26 +114,14 @@ namespace Solution1.Module.BusinessObjects
                 try
 
                 {
-
                     ri = new RegionInfo(ci.Name);
-
                 }
 
                 catch
 
                 {
-
-                    // If a RegionInfo object could not be created we don't want to use the CultureInfo
-
-                    //    for the country list.
-
                     continue;
-
                 }
-
-                // var kraj =    os.CreateObject<Kraj>();
-
-
 
                 var a = ri.EnglishName;
                 var a1 = ri.NativeName;

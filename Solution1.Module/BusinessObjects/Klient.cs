@@ -135,14 +135,14 @@ namespace Demo1.Module.BusinessObjects
             }
         }
 
-        //[Association]
-        //public XPCollection<Spotkanie> Spotkania
-        //{
-        //    get
-        //    {
-        //        return GetCollection<Spotkanie>(nameof(Spotkania));
-        //    }
-        //}
+        [Association]
+        public XPCollection<Spotkanie> Spotkania
+        {
+            get
+            {
+                return GetCollection<Spotkanie>(nameof(Spotkania));
+            }
+        }
 
         [Association]
         public XPCollection<Faktura> Faktury

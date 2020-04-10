@@ -11,8 +11,7 @@ using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
-
-
+using Solution1.Module.BusinessObjects;
 
 namespace JKXAF.Module.DatabaseUpdate
 {
@@ -59,6 +58,11 @@ namespace JKXAF.Module.DatabaseUpdate
             }
             adminRole.IsAdministrative = true;
             userAdmin.Roles.Add(adminRole);
+
+   
+            DataGenerator.DodajKraje(ObjectSpace);
+            DataGenerator.WygenerujKlientow(ObjectSpace);
+
             ObjectSpace.CommitChanges(); //This line persists created object(s).
         }
         public override void UpdateDatabaseBeforeUpdateSchema()
