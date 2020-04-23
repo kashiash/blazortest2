@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>ExpressApp.ico</ApplicationIcon>
+    <RootNamespace>Solution1.Win</RootNamespace>
+    <AssemblyName>Solution1.Win</AssemblyName>
+    <Deterministic>false</Deterministic>
+    <PackageId>Solution1.Win</PackageId>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Model.xafml" />
+    <None Remove="Images\Logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.xafml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Logo.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.RichEdit.Export" Version="20.1.3-pre-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Dashboards.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.ExpressApp" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.ExpressApp.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.FileAttachment.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Office.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Persistent.Base" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Persistent.BaseImpl" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.ReportsV2.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Scheduler.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Security.Xpo" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Validation.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Xpo" Version="20.1.2-ctp-20113" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Solution1.Module.Win\Solution1.Module.Win.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution1.Module\Solution1.Module.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -27,6 +27,8 @@ namespace Demo1.Module.BusinessObjects
 
 
 
+        string test4;
+        string test2;
         string test1;
         string nIP;
         int terminPlatnosci;
@@ -103,10 +105,10 @@ namespace Demo1.Module.BusinessObjects
 
         
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
-        public string Test1
+        public string Test4
         {
-            get => test1;
-            set => SetPropertyValue(nameof(Test1), ref test1, value);
+            get => test4;
+            set => SetPropertyValue(nameof(Test4), ref test4, value);
         }
         public int TerminPlatnosci
         {

@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>Solution1.Module.Win</RootNamespace>
+    <AssemblyName>Solution1.Module.Win</AssemblyName>
+    <Deterministic>false</Deterministic>
+    <PackageId>Solution1.Module.Win</PackageId>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Dashboards.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.ExpressApp" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.ExpressApp.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.FileAttachment.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Office.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Persistent.Base" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Persistent.BaseImpl" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.ReportsV2.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Scheduler.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Security.Xpo" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Validation.Win" Version="20.1.2-ctp-20113" />
+    <PackageReference Include="DevExpress.WindowsDesktop.XAF.Xpo" Version="20.1.2-ctp-20113" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Solution1.Module\Solution1.Module.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

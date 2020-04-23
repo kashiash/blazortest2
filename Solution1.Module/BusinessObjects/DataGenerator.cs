@@ -37,7 +37,7 @@ namespace Solution1.Module.BusinessObjects
             .RuleFor(o => o.Email, (f, u) => f.Internet.Email())
             .RuleFor(o => o.Telefon, f => f.Person.Phone);
 
-            var contacts = conFaker.Generate(10000);
+            var contacts = conFaker.Generate(1000);
 
             var stawki = new List<StawkaVAT>();
             stawki.Add(NowaStawka( ObjectSpace,"23%", 23M));
@@ -54,7 +54,10 @@ namespace Solution1.Module.BusinessObjects
              .RuleFor(o => o.Cena, f => f.Random.Decimal(0.01M, 1000M));
 
             var products = prodFaker.Generate(100);
-            WygenerujFaktury(ObjectSpace, 10000, customers, products);
+
+            ObjectSpace.CommitChanges();
+
+            WygenerujFaktury(ObjectSpace, 1000, customers, products);
         }
 
 
