@@ -49,7 +49,7 @@ namespace Solution1.Module.Imports
 
         public KodyPocztoweImporter()
         {
-            _session = new Session() { ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Solution1f" };
+            _session = new Session() { ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Solution1g" };
 
 
         }
