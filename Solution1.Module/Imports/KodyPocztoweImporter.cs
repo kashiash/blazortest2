@@ -49,7 +49,7 @@ namespace Solution1.Module.Imports
 
         public KodyPocztoweImporter()
         {
-            _session = new Session() { ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Solution1e" };
+            _session = new Session() { ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Solution1f" };
 
 
         }
@@ -91,7 +91,7 @@ namespace Solution1.Module.Imports
             if (gmi == null)
             {
                 gmi = new Gmina(unitOfWork);
-                gmi.NazwaGminy = csv[6].Truncate(100);
+                gmi.NazwaGminy = csv[4].Truncate(100);
                 gmi.Wojewodztwo = woj;
                 gmi.Powiat = pow;
                 gmi.Save();
