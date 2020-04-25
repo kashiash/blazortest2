@@ -60,8 +60,8 @@ namespace JKXAF.Module.DatabaseUpdate
             userAdmin.Roles.Add(adminRole);
 
    
-            DataGenerator.DodajKraje(ObjectSpace);
-            DataGenerator.WygenerujKlientow(ObjectSpace);
+            //DataGenerator.DodajKraje(ObjectSpace);
+            //DataGenerator.WygenerujKlientow(ObjectSpace);
 
             ObjectSpace.CommitChanges(); //This line persists created object(s).
         }

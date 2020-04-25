@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solution1.Module.Win", "Sol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solution1.Win", "Solution1.Win\Solution1.Win.csproj", "{858DDE3D-6DD6-4BCA-8889-72A6C4E7C4C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportkodyPocztowe", "ImportkodyPocztowe\ImportkodyPocztowe.csproj", "{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,12 @@ Global
 		{858DDE3D-6DD6-4BCA-8889-72A6C4E7C4C0}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{858DDE3D-6DD6-4BCA-8889-72A6C4E7C4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{858DDE3D-6DD6-4BCA-8889-72A6C4E7C4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}.EasyTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}.EasyTest|Any CPU.Build.0 = Debug|Any CPU
+		{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747CDBD1-05D1-4E4D-9F97-35C68D6A9C39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,7 +11,7 @@ namespace Solution1.Blazor.Server {
         public Solution1BlazorApplication() {
             InitializeComponent();
             SetupAuthentication();
-            ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Solution1c";
+            ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=(localdb)\mssqllocaldb;Initial Catalog=Solution1d";
         //    ConnectionString = @"Integrated Security=SSPI;Pooling=false;Data Source=WIN-T8AET29PR6C;Initial Catalog=Solution1b";
         }
         private void SetupAuthentication() {
